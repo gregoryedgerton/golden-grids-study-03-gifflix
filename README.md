@@ -1,3 +1,5 @@
+GIFcommit00002
+
 # Layout study 03 — Netflix
 
 **Live:** https://gregoryedgerton.github.io/golden-grids-study-03-netflix/
