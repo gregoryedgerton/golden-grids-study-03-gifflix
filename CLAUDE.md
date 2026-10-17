@@ -15,7 +15,7 @@ login) and nothing may be asserted about it. Read `docs/program/PROGRAM.md`
 first, then `docs/program/STUDY-BRIEF.md`, then `README.md` here, which holds
 the inventory, the measured band table, and the asset spec.
 
-Live at https://gregoryedgerton.github.io/golden-grids-study-03-netflix/;
+Live at https://gregoryedgerton.github.io/golden-grids-study-03-gifflix/;
 pushing to `main` deploys.
 
 ## Rules that are not negotiable
@@ -260,3 +260,5 @@ on a Netflix-styled signed-out page is the shape of a Netflix phishing kit.
 Sign In control, a "Get started" or "Restart your membership" button, a
 download call to action, or any link to netflix.com. After the origin is
 clean, request a review in Google Search Console (Security Issues).
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-03-netflix` to `golden-grids-study-03-gifflix`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.

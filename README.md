@@ -2,7 +2,7 @@ GIFcommit00002
 
 # Layout study 03 — Netflix
 
-**Live:** https://gregoryedgerton.github.io/golden-grids-study-03-netflix/
+**Live:** https://gregoryedgerton.github.io/golden-grids-study-03-gifflix/
 
 An unaffiliated layout study. It takes the structure of Netflix's signed-out
 home and title pages, a ranked row of identical tiles broken up by the
@@ -155,3 +155,5 @@ npm run dev
 `npm run build` type-checks and builds to `dist/`; pushing to `main`
 deploys to GitHub Pages. The library is consumed from npm at its published
 version.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-03-netflix` to `golden-grids-study-03-gifflix`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
