@@ -9,15 +9,13 @@
   "summary": "Netflix's signed-out home page and a title page, rebuilt as stacked golden grids around twelve films of Weimar cinema. A ranked row of ten becomes two grids in which rank sets size, and one film is opened scene by scene.",
   "reviewed": {
     "date": "October 5, 2026",
-    "method": "Captured signed out at 390, 820 and 1440 pixels. The signed-in browse page redirects to a login and was not captured.",
+    "method": "Captured signed out at 390, 820 and 1440 pixels. The signed-in browse page redirects to a login and was not captured. The pages are named here but not linked: a page styled after a streaming service that links to that service reads as phishing to Google's scanners, which flagged the address these studies share in October 2026. The repository's README links them.",
     "pages": [
       {
-        "label": "netflix.com, signed out",
-        "url": "https://www.netflix.com/"
+        "label": "Netflix's home page, signed out"
       },
       {
-        "label": "A Netflix title page (title/80240715)",
-        "url": "https://www.netflix.com/title/80240715"
+        "label": "A Netflix title page, signed out"
       }
     ]
   },
@@ -28,7 +26,7 @@
   "invented": [
     "GIFflix as a streaming service, with its plans, prices, reasons to join and questions. The name is a parody made for this study; none of it exists.",
     "The ranking of the ten films, the synopses and every caption.",
-    "The sign-up form, which sends nothing."
+    "The closing band, which says that GIFflix has no accounts. The reference's membership form and the header's account control are left out, so nothing on the page asks the reader for anything."
   ],
   "assets": [
     {
@@ -53,5 +51,5 @@
   ],
   "owner": "Netflix, or the estates and archives that hold the films",
   "repo": "https://github.com/gregoryedgerton/golden-grids-study-03-netflix",
-  "updated": "October 9, 2026"
+  "updated": "October 17, 2026"
 }

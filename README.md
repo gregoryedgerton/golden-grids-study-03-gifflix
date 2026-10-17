@@ -16,10 +16,13 @@ original. Nothing from Netflix is reproduced. Built with
 
 ## Reference
 
-The signed-out netflix.com home page and a signed-out title page
-(https://www.netflix.com/title/80240715), captured 2026-10-05 at 390 / 820 /
-1440; `/browse` redirects to login and was not captured. Captures, measured
-tile boxes and tokens are in [`captures/`](captures/).
+The signed-out netflix.com home page (https://www.netflix.com/) and a
+signed-out title page (https://www.netflix.com/title/80240715), captured
+2026-10-05 at 390 / 820 / 1440; `/browse` redirects to login and was not
+captured. Captures, measured tile boxes and tokens are in
+[`captures/`](captures/). These addresses are kept here and nowhere in the
+build: the published pages name Netflix but do not link to it (see Notes for
+review).
 
 | Width | Home | Title | Rebuild |
 | --- | --- | --- | --- |
@@ -56,7 +59,7 @@ Fourteen bands in the order below. Measured grid sizes are width×height at
 | Act two | 1–5 / 1–7 · top · ccw | — | Seven frames, the coffin leading |
 | Act three | 1–5 / 1–7 · bottom · ccw | — | Seven frames, the window leading |
 | FAQ | list | — | Five questions, `details` elements, not a grid |
-| Start watching | 1–1 / 1–2 · left | — | The call to action; the form sends nothing |
+| Start watching | 1–1 / 1–2 · left | — | Where the reference has its email call to action: a statement that GIFflix has no accounts, and the films' dates. No form |
 
 The ten film cards between them use all eight placement × direction pairs.
 At 390 every card has four squares, portrait where the placement is top or
@@ -117,6 +120,18 @@ Observations for whoever reviews this study, recorded without a verdict. Whether
 - **Print provenance.** Seven of the ten ranked stills come from prints of unknown or restored origin; `ASSETS.md` says which.
 - **Scene frames.** Each was moved by up to two minutes from an even sample, to avoid intertitles.
 - **No dial.** An earlier version scrubbed one film on a spiral dial; it was replaced by the three act bands on 2026-10-06.
+- **Changes after the Safe Browsing flag (2026-10-17).** Google Safe Browsing
+  flagged the address these studies share, gregoryedgerton.github.io, as
+  deceptive. Nothing was ever collected here, but a Netflix-styled signed-out
+  page with an email box and a Get Started button has the shape of a Netflix
+  phishing page, so the shape was removed. The closing band's email form is
+  gone: its first square now says that GIFflix has no accounts and that the
+  films play from their public prints, and its second carries the films' dates.
+  The header's Sign In is gone; the language control holds the corner. The
+  pages name Netflix but no longer link to it: the closing disclosure says why
+  ("Why nothing here links to Netflix"), and the addresses are kept in this
+  README only. The reason titled "Download the films" now reads "Watch
+  offline".
 
 ## Disclosure
 

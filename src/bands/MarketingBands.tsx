@@ -10,7 +10,7 @@ import { Band } from "./Band";
  * plan banner between the two halves of the ranking, the reasons to join
  * before the opened title, the price table and the FAQ between the acts,
  * and the call to action last. The service is fictional; the copy is the
- * study's; the form sends nothing.
+ * study's. There is no form and no sign-up anywhere.
  */
 export function PlanBannerBand() {
   const viewport = useViewport();
@@ -84,6 +84,9 @@ export function FaqBand() {
   );
 }
 
+/** The reference closes on an email box that begins a membership. GIFflix has
+ *  no accounts, so the same square holds a plain statement of that, with no
+ *  input and no button (CLAUDE.md, Safe Browsing remediation). */
 export function CtaBand() {
   const viewport = useViewport();
   const single = viewport === "mobile";
@@ -91,18 +94,10 @@ export function CtaBand() {
     <Band id="cta" title={SERVICE.cta.headline} lesson={SERVICE.cta.body} note={`from=1 to=${single ? 1 : 2} · placement="left"`} cap={single ? undefined : "60rem"}>
       <GoldenGrid from={1} to={single ? 1 : 2} placement="left">
         <GoldenBox>
-          <div className="box">
-            <p className="box__label">{SERVICE.name}</p>
-            <form className="cta" onSubmit={(e) => e.preventDefault()} aria-describedby="cta-note">
-              <label className="cta__label" htmlFor="cta-email">Email address</label>
-              <input id="cta-email" className="cta__input" type="email" name="email" autoComplete="off" placeholder="name@example.com" />
-              <button type="submit" className="btn">{SERVICE.cta.button}</button>
-              <p id="cta-note" className="box__source">{SERVICE.cta.disclaimer}</p>
-            </form>
-          </div>
+          <Fact label={SERVICE.name} body={<p>{SERVICE.cta.detail}</p>}>{SERVICE.cta.line}</Fact>
         </GoldenBox>
         <GoldenBox>
-          <Fact label="Membership">{SERVICE.cta.headline}</Fact>
+          <Fact label={SERVICE.cta.span.label} fitClass="fit--num">{SERVICE.cta.span.line}</Fact>
         </GoldenBox>
       </GoldenGrid>
     </Band>

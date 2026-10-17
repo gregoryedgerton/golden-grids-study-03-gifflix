@@ -39,13 +39,14 @@ export function App() {
       <Tools />
       <a className="skip" href="#content">Skip to content</a>
       <StudyBanner />
-      {/* The reference's signed-out header: the name at the left, a language
-          control and Sign In at the right, then the headline over the rows. */}
+      {/* The reference's signed-out header: the name at the left and the
+          language control at the right, then the headline over the rows. The
+          reference's Sign In is left out: GIFflix has no accounts (CLAUDE.md,
+          Safe Browsing remediation). */}
       <header className="top">
         <a className="wordmark" href="#content">GIFflix</a>
         <div className="top__right">
           <span className="top__lang" title="The study is in English only">English</span>
-          <span className="btn top__signin">Sign In</span>
         </div>
       </header>
       <main id="content">
@@ -75,7 +76,14 @@ export function App() {
         <CtaBand />
       </main>
 
-      <StudyDisclosure />
+      <StudyDisclosure>
+        <p>
+          <strong>Why nothing here links to Netflix.</strong> The pages this study follows are named but not linked. A page
+          styled after a streaming service that links to that service's own site can be flagged as phishing by automated
+          scanners, as the address these studies share was in October 2026, so the study does not link out to it. The addresses are listed in
+          the study's repository.
+        </p>
+      </StudyDisclosure>
     </>
   );
 }

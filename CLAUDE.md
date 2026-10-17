@@ -86,7 +86,8 @@ pushing to `main` deploys.
   Archive embed (or the Commons file for Nosferatu) only on request. Keep
   clips at 480px square and under ~700 KB.
 - Marketing copy (banner, reasons, plans, FAQ, CTA) is for the fictional
-  service GIFflix, plain and straight, never cheeky; the form sends nothing.
+  service GIFflix, plain and straight, never cheeky. There is no form: the
+  closing band says GIFflix has no accounts (see Safe Browsing remediation).
 - The featured film is Berlin: Symphony of a Great City; Nosferatu is the
   opened title and appears once before its acts.
 - Page copy is about the FILMS, never about the grid: band titles and
@@ -164,7 +165,9 @@ Two geometry rules, verified against source, that every band relies on:
   the site being studied or its apps. Nav items are the reference's own, for
   show (plain text); only an item that leads to one of the study's own pages
   or sections is a link. Credits for photographs, maps and facts from other
-  sources may link to those sources. (Greg, 2026-10-09.)
+  sources may link to those sources. (Greg, 2026-10-09.) **Exception since
+  2026-10-17:** this study does not link to Netflix at all, not even from the
+  notice and disclosure (see Safe Browsing remediation).
 
 ## API facts, verified against 5.0.0 source
 
@@ -223,3 +226,37 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin
+gregoryedgerton.github.io as "social engineering" (pages that try to trick
+visitors into sharing personal information or downloading software). The first
+trigger was the demo bank sign-in in Study 19 (GIFbank); every study was then
+cleared of anything that *looks like* collecting credentials or personal data,
+signing in, paying or downloading software. Nothing was ever collected here:
+the form sent nothing. The scanner reads appearance, so the appearance changed.
+Netflix is one of the most phished brands, and an email box with "Get started"
+on a Netflix-styled signed-out page is the shape of a Netflix phishing kit.
+
+**What changed**
+- The closing band (`CtaBand`, `src/bands/MarketingBands.tsx`) lost its email
+  form: no label, no email input, no submit button. Its first square is a
+  `Fact` saying GIFflix has no accounts and the films play from their public
+  prints (`SERVICE.cta` in `src/content.ts`); its second carries the films'
+  dates. The band keeps its range and placement.
+- The header's Sign In (`src/App.tsx`, the `.top__signin` rule) is gone; the
+  language control holds the right-hand corner.
+- The pages name the reference but do not link to it: `study.json` pages have
+  no `url` and their labels carry no address, `reviewed.method` says why, the
+  closing disclosure carries "Why nothing here links to Netflix" (children of
+  `StudyDisclosure` in `src/App.tsx`), and the README keeps the addresses. No
+  netflix.com address may appear in the build: check `dist`. Links to the
+  Internet Archive and Wikimedia Commons stay.
+- The lesson that read "Enter your email to begin a membership or restart one"
+  is gone, and the reason "Download the films" reads "Watch offline".
+
+**Do not** bring back an email or password input, a sign-up or sign-in form, a
+Sign In control, a "Get started" or "Restart your membership" button, a
+download call to action, or any link to netflix.com. After the origin is
+clean, request a review in Google Search Console (Security Issues).

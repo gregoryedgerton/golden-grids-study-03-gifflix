@@ -204,8 +204,9 @@ export const FRAMES = FRAME_SECONDS.map((seconds, i) => {
 /**
  * The service. The reference breaks its rows with a plan banner, four
  * "reasons to join", a price table, a FAQ and an email call to action. This
- * study's service is fictional and so is every word here; nothing is
- * submitted by the form.
+ * study's service is fictional and so is every word here. The closing band
+ * has no form: where the reference asks for an email address, GIFflix says it
+ * has no accounts (CLAUDE.md, Safe Browsing remediation).
  */
 export const SERVICE = {
   name: "GIFflix",
@@ -216,7 +217,7 @@ export const SERVICE = {
   },
   reasons: [
     { title: "Watch on any screen", body: "Phone, tablet, laptop and television, and the same place in the film on each." },
-    { title: "Download the films", body: "Save any film to watch where there is no connection." },
+    { title: "Watch offline", body: "Save any film to the device and watch where there is no connection." },
     { title: "Notes with every film", body: "Who made it, when, and from which print; the scenes named as you go." },
     { title: "Cancel at any time", body: "No contract. Change or end the plan whenever you choose." },
   ],
@@ -232,5 +233,11 @@ export const SERVICE = {
     ["Can I cancel?", "At any time, from the account page. There is no contract and no fee for leaving."],
     ["Are the films suitable for children?", "Most carry no rating, having been made before ratings existed. Each film's notes say whether it contains frightening scenes; Nosferatu, Caligari and Waxworks do."],
   ],
-  cta: { headline: "Start watching tonight", body: "Enter your email to begin a membership or restart one.", button: "Get started", disclaimer: "A demonstration. Nothing is sent." },
+  cta: {
+    headline: "Start watching tonight",
+    body: "Every film on this page plays from its print, on request, with no account.",
+    line: "Press play",
+    detail: "GIFflix is fictional. It has no accounts and asks for nothing. The films above are in the public domain, and each plays from its print at the Internet Archive or Wikimedia Commons when Play the film is chosen.",
+    span: { label: "Twelve films", line: "1920–1929" },
+  },
 };
